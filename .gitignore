@@ -1,7 +1,7 @@
-.idea
-
-JavaRushPlugin.properties
+.idea/*
 
 *.iml
+
+JavaRushPlugin.properties
 
 *.png
