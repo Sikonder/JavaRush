@@ -1,5 +1,6 @@
 package com.javarush.task.task36.task3602;
 
+import java.lang.reflect.Modifier;
 import java.util.Collections;
 
 /* 
@@ -11,6 +12,18 @@ public class Solution {
     }
 
     public static Class getExpectedClass() {
+        for(Class clazz : Collections.class.getDeclaredClasses()){
+            for(Class intr : clazz.getInterfaces()){
+                if(intr.getSimpleName().equals("List")&& Modifier.isStatic(clazz.getModifiers())){
+
+                }
+            }
+        }
+        try {
+            return Class.forName("java.util.Collections$EmptyList");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
         return null;
     }
 }
