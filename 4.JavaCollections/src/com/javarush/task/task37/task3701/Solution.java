@@ -2,7 +2,7 @@ package com.javarush.task.task37.task3701;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.function.Consumer;
+
 
 /* 
 Круговой итератор
@@ -59,9 +59,6 @@ public class Solution<T> extends ArrayList<T> {
             iterator.remove();
         }
 
-        @Override
-        public void forEachRemaining(Consumer<? super T> action) {
-            iterator.forEachRemaining(action);
-        }
+
     }
 }

@@ -18,15 +18,7 @@ public class OurHashMapStorageStrategy implements StorageStrategy {
 
     @Override
     public boolean containsValue(String value) {
-        if(value==null){
-            return false;
-        }
-        for (Entry table : table){
-            for(Entry e = table;e!=null;e=e.next){
-                if(value.equals(e.value))
-                    return true;
-            }
-        }
+
         return false;
     }
 
@@ -37,17 +29,7 @@ public class OurHashMapStorageStrategy implements StorageStrategy {
 
     @Override
     public Long getKey(String value) {
-        if(value==null){
-            return 0L;
-        }
 
-        for(Entry table : table){
-            for(Entry e = table;e!=null;e = e.next){
-                if(value.equals(e.value)){
-                    return table.getKey();
-                }
-            }
-        }
         return null;
     }
 
